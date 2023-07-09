@@ -45,6 +45,7 @@ body {
   .main-container .body {
     background-color: #0c1830;
     height: 100%;
+    overflow: auto;
     padding: 1.5rem 10% 2.5rem 10%; }
     .main-container .body .section {
       margin-top: 2.5rem;
@@ -237,7 +238,83 @@ body {
 
 @media (max-device-width: 1000px) {
   .main-container .body {
-    padding: 1.5rem 5% 2.5rem 5%; } }
+    padding: 1.5rem 5% 2.5rem 5%; }
+  .main-container .about-container .timeline {
+    display: none; }
+  .main-container .about-container .mobile-timeline {
+    margin: 20px auto;
+    padding: 20px;
+    /* Setting the border of top, bottom, left */
+    /* Setting the border of top, bottom, right */
+    /* Removing the border if it is the first card */
+    /* Removing the border if it is the last card  and it's odd */
+    /* Removing the border if it is the last card  and it's even */
+    /* Information about the timeline */
+    /* Title of the card */
+    /* Timeline dot  */
+    /* text right if the card is even  */
+    /* setting dot to the left if the card is odd */
+    /* setting dot to the right if the card is odd */ }
+    .main-container .about-container .mobile-timeline .card {
+      position: relative;
+      max-width: 400px; }
+    .main-container .about-container .mobile-timeline .card:nth-child(odd) {
+      padding: 30px 0 30px 30px; }
+    .main-container .about-container .mobile-timeline .card:nth-child(even) {
+      padding: 30px 30px 30px 0; }
+    .main-container .about-container .mobile-timeline .card::before {
+      content: "";
+      position: absolute;
+      width: 50%;
+      border: solid white; }
+    .main-container .about-container .mobile-timeline .card:nth-child(odd)::before {
+      left: 0px;
+      top: -4.5px;
+      bottom: -4.5px;
+      border-width: 5px 0 5px 5px;
+      border-radius: 50px 0 0 50px; }
+    .main-container .about-container .mobile-timeline .card:nth-child(even)::before {
+      right: 0;
+      top: 0;
+      bottom: 0;
+      border-width: 5px 5px 5px 0;
+      border-radius: 0 50px 50px 0; }
+    .main-container .about-container .mobile-timeline .card:first-child::before {
+      border-top: 0;
+      border-top-left-radius: 0; }
+    .main-container .about-container .mobile-timeline .card:last-child:nth-child(odd)::before {
+      border-bottom: 0;
+      border-bottom-left-radius: 0; }
+    .main-container .about-container .mobile-timeline .card:last-child:nth-child(even)::before {
+      border-bottom: 0;
+      border-bottom-right-radius: 0; }
+    .main-container .about-container .mobile-timeline .info {
+      display: flex;
+      flex-direction: column;
+      background: #0f1624;
+      border-radius: 10px;
+      padding: 10px;
+      box-shadow: 0px 5px 15px white;
+      color: #ededed; }
+      .main-container .about-container .mobile-timeline .info h3 {
+        margin: 0; }
+    .main-container .about-container .mobile-timeline .title {
+      color: white;
+      position: relative; }
+    .main-container .about-container .mobile-timeline .title::before {
+      content: "";
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background: white;
+      border-radius: 999px;
+      border: 3px solid white; }
+    .main-container .about-container .mobile-timeline .card:nth-child(even) > .info > .title {
+      text-align: right; }
+    .main-container .about-container .mobile-timeline .card:nth-child(odd) > .info > .title::before {
+      left: -45px; }
+    .main-container .about-container .mobile-timeline .card:nth-child(even) > .info > .title::before {
+      right: -45px; } }
 
 @media (max-device-width: 900px) {
   .main-container .body .section .intro-container {
@@ -262,9 +339,7 @@ body {
     .main-container .body .tech-wrapper .other-tech {
       align-items: center; }
     .main-container .body .tech-wrapper .tech-container {
-      padding-left: 0; }
-  .main-container .about-container .timeline {
-    display: none; } }
+      padding-left: 0; } }
 
 @media (max-device-width: 600px) {
   .main-container .header .menu-container,

@@ -7,5 +7,5 @@ function navClicked(params) {
   } else {
     mobileNav.style.display = "flex";
   }
-  console.log(mobileNav.style.display);
+  // console.log(mobileNav.style.display);
 }
