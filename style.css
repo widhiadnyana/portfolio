@@ -263,7 +263,7 @@ body {
       align-items: center; }
     .main-container .body .tech-wrapper .tech-container {
       padding-left: 0; }
-  .main-container .mobile-nav {
+  .main-container .about-container .timeline {
     display: none; } }
 
 @media (max-device-width: 600px) {
