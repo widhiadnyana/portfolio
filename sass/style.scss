@@ -64,7 +64,6 @@ body {
   .body {
     background-color: $bg-color2;
     height: 100%;
-    overflow: auto;
     padding: 1.5rem 10% 2.5rem 10%;
     .section {
       margin-top: 2.5rem;
@@ -298,6 +297,14 @@ body {
     flex-direction: row;
     justify-content: center;
     gap: 1.5rem;
+  }
+}
+
+@media (min-device-width: 1000px) {
+  .about-container {
+    .mobile-timeline {
+      display: none;
+    }
   }
 }
 
